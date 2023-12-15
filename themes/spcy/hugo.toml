@@ -2,18 +2,81 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 
+[params]
+  [params.p1]
+    title = 'tldr'
+    toptext = 'a game "studio" ran by one overworked student and her best friends'
+    bottomtext = 'now leave'
+  [params.p2]
+    title = 'games'
+    [params.p2.games.ivyspeppers]
+      title = "ivy's peppers"
+      description = """
+      pick pepper do game
+      """
+      image = '/images/placeholder.jpg'
+      link = 'https://www.roblox.com/games/15318631268/ivys-peppers'
+    [params.p2.games.placeholder]
+      title = 'placeholder'
+      description = """
+      we literally only have one game
+      """
+      image = "/images/placeholder.jpg"
+      link = 'https://www.roblox.com/games/15566395852/Nicki-Minaj-s-Gag-City'
+  [params.p3]
+    title = 'goals'
+    subtitle = 'bite-sized games'
+    content = [
+      'no purchases',
+      'no manipulation',
+      'no ranking system',
+      'community oriented',
+    ]
+  [params.p4]
+    title = 'team'
+    [params.p4.team.pop]
+      name = 'pop (@pnmpki)'
+      description = """
+      main designer, the cool artist in question!!
+
+      brains behind the operation
+      """
+      profile = "/images/placeholder.jpg"
+      banner = "/images/placeholder.jpg"
+    [params.p4.team.ivy]
+      name = 'ivy (@syyivi)'
+      description = """
+      programmer, overworked student in question,
+
+      muscles behind the operation
+      """
+      profile = "/images/placeholder.jpg"
+      banner = "/images/placeholder.jpg"
+  [params.footerlinks.kofi]
+    icon = 'nf-fa-coffee'
+    link = 'https://ko-fi.com/spcyivy'
+  [params.footerlinks.discord]
+    icon = 'nf-md-discord'
+    link = 'https://imgur.com/gallery/Me5TGNg'
+  [params.footerlinks.github]
+    icon = 'nf-fa-github'
+    link = 'https://github.com/spcy-ivy'
+  [params.footerlinks.roblox]
+    icon = 'nf-md-account_group'
+    link = 'https://www.roblox.com/groups/33284345/spcy#!/about'
+
 [[menus.main]]
-name = 'Home'
+name = 'home'
 pageRef = '/'
 weight = 10
 
 [[menus.main]]
-name = 'Posts'
+name = 'posts'
 pageRef = '/posts'
 weight = 20
 
 [[menus.main]]
-name = 'Tags'
+name = 'tags'
 pageRef = '/tags'
 weight = 30
 

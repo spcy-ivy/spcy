@@ -1,10 +1,17 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+<main>
+  <article class="flex flex-col justify-center items-center space-y-2">
+    <h1 class="text-3xl underline underline-offset-8 pt-4"># {{ .Title }}</h1>
 
-  {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-  {{ $dateHuman := .Date | time.Format ":date_long" }}
-  <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+    {{ $dateHuman := .Date | time.Format ":date_long" }}
+    <time datetime="{{ $dateMachine }}"><i class="nf nf-md-calendar_blank"></i> {{ $dateHuman }}</time>
 
-  {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+
+    <section class="prose block m-2 w-[32rem] pb-8">
+      {{ .Content }}
+    </section>
+  </article>
+</main>
 {{ end }}

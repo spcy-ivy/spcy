@@ -1,8 +1,13 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+  <section class="flex flex-col justify-center items-center">
+    <h1 class="text-4xl font-bold p-4">{{ .Title }}</h1>
+    <div class="w-[42rem] border-t-2 border-light-fg p-4" />
+
+    <p class="p-2">{{ .Content }}</p>
+
+    {{ range .Pages }}
+      <h2 class="pt-4 text-2xl underline underline-offset-8 font-bold"><a href="{{ .RelPermalink }}"># {{ .LinkTitle }}</a></h2>
+      <p class="p-2">{{ .Summary }}</p>
+    {{ end }}
+  </section>
 {{ end }}

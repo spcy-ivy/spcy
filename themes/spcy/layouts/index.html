@@ -1,0 +1,68 @@
+{{ define "main" }}
+<main>
+  <section>
+    <div class="flex flex-col justify-center items-center min-h-screen">
+      <h1 class="text-8xl font-bold">{{ .Site.Params.P1.title }}</h1>
+      <p class="w-[48rem] text-4xl text-center p-8">{{ .Site.Params.P1.toptext }}</p>
+      <div class="w-[42rem] border-t-2 border-light-fg" />
+      <p class="text-4xl text-center pt-48">{{ .Site.Params.P1.bottomtext }}</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="flex flex-col justify-center items-center min-h-screen space-y-4">
+      <h1 class="text-8xl font-bold py-4">{{ .Site.Params.P2.title }}</h1>
+      <div class="flex justify-center items-center space-x-11 w-full h-72 drop-shadow-xl">
+        {{ range .Site.Params.P2.games }}
+        <div class="flex flex-col justify-center items-center bg-lighter-bg h-full w-[30rem] px-11 space-y-2 rounded-md">
+          <img src="{{ .image }}"
+               class="absolute top-0 rounded-md object-cover w-[30rem] h-24"
+               alt="game thumbnail">
+          <!-- artificial bumper to make the banner fit better -->
+          <div class="w-full h-10"></div>
+          <h1 class="text-2xl font-bold">{{ .title }}</h1>
+          <hr class="w-1/2 border rounded-full border-selection-fg" />
+          <p class="whitespace-pre">{{ .description }}</p>
+          <a href="{{ .link }}" class="underline underline-offset-4 pt-4">view on roblox</a>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="flex flex-col justify-center items-center min-h-screen space-y-16">
+      <h1 class="text-8xl font-extrabold">{{ .Site.Params.P3.title }}</h1>
+      <p class="text-4xl text-center">{{ .Site.Params.P3.subtitle }}</p>
+      <ul class="text-4xl space-y-2">
+        {{ range .Site.Params.P3.content }}
+        <li>- {{ . }}</li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="flex flex-col justify-center items-center min-h-screen space-y-24">
+      <h1 class="text-8xl font-bold">team</h1>
+      <div class="flex justify-center items-center space-x-11 w-full h-72 drop-shadow-xl">
+        {{ range .Site.Params.P4.team }}
+        <div class="flex flex-col justify-center items-center bg-lighter-bg h-full w-80 px-11 space-y-2 rounded-md">
+          <img src="{{ .banner }}"
+               class="absolute top-0 rounded-md object-cover w-80 h-24"
+               alt="profile banner">
+          <img src="{{ .profile }}"
+               class="absolute -top-6 rounded-full object-cover w-32 h-32 rounded-full"
+               alt="profile picture">
+          <!-- artificial bumper to make the banner and pfp fit better -->
+          <div class="w-full h-12"></div>
+          <h1 class="text-2xl font-bold">{{ .name }}</h1>
+          <hr class="w-1/2 border rounded-full border-selection-fg" />
+          <p class="text-center">{{ .description }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+</main>
+{{ end }}

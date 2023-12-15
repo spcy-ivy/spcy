@@ -1,1 +1,8 @@
-<p>Copyright {{ now.Year }}. All rights reserved.</p>
+<div class="w-full flex flex-col justify-center items-center bg-lighter-bg">
+  <ul class="flex flex-row">
+    {{ range .Site.Params.Footerlinks }}
+    <a class="p-2" href="{{ .link }}"><i class="text-2xl nf {{ .icon }}"></i></a>
+    {{ end }}
+  </ul>
+  <p>copyright is for losers</p>
+</div>

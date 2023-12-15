@@ -1,0 +1,14 @@
+<div class="top-0 z-50 w-full bg-lighter-bg flex flex-row items-center justify-between md:sticky">
+  <img src="/images/icon.png"
+       class="h-14 w-14 p-2"
+       alt="logo">
+  <ul class="flex flex-row">
+    {{ range site.Menus.main }}
+    <a href="{{ .URL }}" class="p-2 text-2xl">{{ .Name }}</a>
+    {{ end }}
+  </ul>
+
+  <div class="text-2xl p-2">
+    spcy
+  </div>
+</div>
