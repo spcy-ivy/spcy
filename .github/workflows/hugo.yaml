@@ -38,10 +38,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
-      - name: Setup Tailwind
+      - name: Setup node
         uses: actions/setup-node@v4
         with:
           node-version: 18
+      - name: Setup tailwind
         working-directory: ./themes/spcy
         run: |
           npm ci
