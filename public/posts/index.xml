@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on spcy</title>
+    <link>https://example.org/posts/</link>
+    <description>Recent content in Posts on spcy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 01 Jan 2023 08:30:00 -0700</lastBuildDate>
+    <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hi</title>
+      <link>https://example.org/posts/firstpost/</link>
+      <pubDate>Fri, 15 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://example.org/posts/firstpost/</guid>
+      <description>read the homepage if you want a tldr, but if youre geniunely interested in us (for some sick and twisted reason) you can read further!
+whyd you make this group? i just made the group so that all of my future revenue would go toward the group and i could compensate anyone who helped
+idk why i expanded it to like a whole ass website&amp;hellip; but you know what its a fun idea and grorwing a community is worth a try</description>
+    </item>
+  </channel>
+</rss>
