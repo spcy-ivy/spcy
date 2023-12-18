@@ -14,7 +14,7 @@ title = 'My New Hugo Site'
       description = """
       pick pepper do game
       """
-      image = 'images/placeholder.jpg'
+      image = 'images/game_banners/ivys_peppers.png'
       link = 'https://www.roblox.com/games/15318631268/ivys-peppers'
     [params.p2.games.placeholder]
       title = 'placeholder'
@@ -41,8 +41,8 @@ title = 'My New Hugo Site'
 
       brains behind the operation
       """
-      profile = "images/placeholder.jpg"
-      banner = "images/placeholder.jpg"
+      profile = 'images/profiles/pop/profile.png'
+      banner = 'images/profiles/pop/banner.jpg'
     [params.p4.team.ivy]
       name = 'ivy (@syyivi)'
       description = """
@@ -50,8 +50,8 @@ title = 'My New Hugo Site'
 
       muscles behind the operation
       """
-      profile = "images/placeholder.jpg"
-      banner = "images/placeholder.jpg"
+      profile = 'images/profiles/ivy/profile.png'
+      banner = 'images/profiles/ivy/banner.jpg'
   [params.footerlinks.kofi]
     icon = 'nf-fa-coffee'
     link = 'https://ko-fi.com/spcyivy'
