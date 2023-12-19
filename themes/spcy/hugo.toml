@@ -57,7 +57,7 @@ title = 'My New Hugo Site'
     link = 'https://ko-fi.com/spcyivy'
   [params.footerlinks.discord]
     icon = 'nf-md-discord'
-    link = 'https://imgur.com/gallery/Me5TGNg'
+    link = 'https://discord.gg/ukTvRZQX'
   [params.footerlinks.github]
     icon = 'nf-fa-github'
     link = 'https://github.com/spcy-ivy'
