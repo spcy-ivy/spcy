@@ -30,16 +30,18 @@ jobs:
     env:
       HUGO_VERSION: 0.120.4
     steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
-      - name: Setup Nix
-        uses: cachix/install-nix-action@v22
+      - name: Setup node
+        uses: actions/setup-node@v4
         with:
-          github_access_token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Setup Nix Toolchain
-        run: nix develop
+          node-version: 18
       - name: Setup tailwind
         working-directory: ./themes/spcy
         run: |
